@@ -1,0 +1,58 @@
+$neon-blue: #00ffff
+$neon-pink: #ff00cc
+$neon-purple: #8a2be2
+$bg-dark: #0f0f1a
+$pad-bg: #1a1a2e
+$font: 'Orbitron', sans-serif
+
+body
+  background-color: $bg-dark
+  font-family: $font
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  margin: 0
+  padding: 2rem
+
+#drum-machine
+  background: rgba(20, 20, 40, 0.9)
+  padding: 2rem
+  border-radius: 15px
+  box-shadow: 0 0 20px $neon-pink
+  width: 400px
+  text-align: center
+
+#display
+  background: $pad-bg
+  border: 2px solid $neon-blue
+  color: $neon-blue
+  font-size: 1.2rem
+  margin-bottom: 1rem
+  padding: 0.75rem
+  border-radius: 10px
+  box-shadow: 0 0 10px $neon-blue inset
+
+.pad-grid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 1rem
+
+.drum-pad
+  background: $pad-bg
+  border: 2px solid $neon-pink
+  border-radius: 10px
+  padding: 1rem
+  font-size: 1.5rem
+  font-weight: bold
+  cursor: pointer
+  box-shadow: 0 0 10px $neon-pink
+  transition: 0.2s ease
+  &:hover
+    background: $neon-pink
+    color: black
+    box-shadow: 0 0 20px $neon-pink
+
+audio
+  display: none
