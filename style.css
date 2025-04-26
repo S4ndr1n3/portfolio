@@ -1,0 +1,152 @@
+:root {
+  --primary: #0ff;
+  --secondary: #a0f;
+  --accent: #0f0;
+  --bg-dark: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --text-light: #e0e0e0;
+  --border-glow: 0 0 10px var(--primary);
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--primary);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover {
+  color: var(--accent);
+}
+
+#navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--border-glow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-content ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-content ul li a:hover {
+  color: var(--secondary);
+}
+
+#welcome-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top left, #111, #000);
+  padding: 2rem;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+}
+
+#welcome-section p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#projects {
+  padding: 5rem 2rem;
+  background-color: var(--bg-dark);
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--border-glow);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card figcaption {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#contact {
+  padding: 5rem 2rem;
+  background-color: #111;
+  text-align: center;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+#contact ul li a {
+  transition: color var(--transition-speed);
+}
+
+#contact ul li a:hover {
+  color: var(--secondary);
+}
+
+footer {
+  background-color: #080808;
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-light);
+  border-top: 1px solid #222;
+}
